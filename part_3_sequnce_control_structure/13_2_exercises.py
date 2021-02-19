@@ -58,5 +58,7 @@ elif num3 < 50000 and num3 >= 10000:
 else:
 
     unit3 = num3 // 1000
-    
+
     print("천 원", unit3, "장")
+
+
