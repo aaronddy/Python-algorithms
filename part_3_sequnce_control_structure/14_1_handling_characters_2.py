@@ -42,6 +42,9 @@ import string
 
 alphabet = string.ascii_lowercase
 
+
+# 백슬래쉬(\) 안 하면 에러 발생(invalid syntax)
+
 random_word_a = alphabet[random.randrange(26)]+      \
                 alphabet[random.randrange(26)]+      \
                 alphabet[random.randrange(26)]+      \
@@ -49,6 +52,32 @@ random_word_a = alphabet[random.randrange(26)]+      \
                 alphabet[random.randrange(26)]
 
 
+random_word_b = alphabet[random.randrange(len(alphabet))]+      \
+                alphabet[random.randrange(len(alphabet))]+      \
+                alphabet[random.randrange(len(alphabet))]+      \
+                alphabet[random.randrange(len(alphabet))]+      \
+                alphabet[random.randrange(len(alphabet))]
 
 
-print(random_word_a)
+print("첫번째 방법 결과:", random_word_a, ", 두번째 방법 결과:", random_word_b)
+
+
+# 14.4-4  숫자를 역순으로 바꾸기
+# 하나의 정수를 입력받아 그 정수를 역순으로 변환하는 프로그램 작성
+
+# code1
+int_num1 = int(input("세자리 정수를 입력하라: "))
+
+one, two, three = str(int_num1)
+reverse_num1 = int(three + two + one)
+
+print("code1_역순으로 바뀐 정수는", reverse_num1)
+
+
+# code2
+
+int_num2 = int(input("세자리 정수를 입력하라: "))
+
+reverse_num2 = int(str(int_num2)[::-1])
+
+print("code2_역순으로 바뀐 정수는", reverse_num2)
