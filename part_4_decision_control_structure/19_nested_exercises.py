@@ -89,6 +89,14 @@ else:
 
     drawler = int(input('출금 금액을 입력하라'))
 
+    unit1, r = divmod(drawler, 50000)
+    unit2, r = divmod(r, 10000)
+    unit3, unit4 = divmod(r, 5000)
+
+    print("5만 원권", unit1, "장, 1만 원권", unit2, "장, 5천 원권", unit3, "장, 천 원권", unit4, "장 출금")
+
+
+'''
     if drawler >= 50000:
 
         unit1, r = divmod(drawler, 50000)
@@ -115,3 +123,5 @@ else:
         unit4 = drawler
 
         print("천 원권", unit4, "장 출금")
+
+'''
