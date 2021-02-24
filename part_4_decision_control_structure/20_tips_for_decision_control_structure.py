@@ -148,3 +148,52 @@ y += 1
 
 if y <= 0:
     print(y + 12)
+
+
+
+# 20.8-1  다중-택일 결정 구조를 중첩 결정 구조로 바꾸기
+
+x = float(input("첫 번째 숫자를 입력하라: "))
+y = float(input("두 번째 숫자를 입력하라: "))
+
+result = x * y
+
+if x < 0 and y < 0:
+    print("두 음수의 곱은 양수입니다.")
+    print(x, "* (", y, ")의 값: +", result, sep="")
+
+else:
+    if x < 0:
+        print("음수와 양수의 곱은 음수입니다.")
+        print(x, "* ", y, "의 값: +", result, sep="")
+
+
+    else:
+        if y < 0:
+            print("음수와 양수의 곱은 음수입니다.")
+            print(x, "* (", y, ")의 값: +", result, sep="")
+
+        else:
+            print("두 양수의 곱은 양수입니다.")
+            print(x, "* ", y, "의 값: +", result, sep="")
+
+
+
+# 20.9  결정 제어 구조에서 '내부에서 외부로' 방식 사용하기
+
+num9 = input("하나의 정수값을 입력하라")
+
+
+if not int(num9):
+    
+    pass
+
+else:
+
+    remain = int(num9) % 10 
+
+    if remain == 5:
+        print("마지막 자릿수값은 5입니다.")
+
+    else:
+        print("특별한 것이 없네요.")
