@@ -17,11 +17,14 @@ print("홀수:", odd, "짝수:", even)
 # 27.7-1  파이썬 프로그램 변환하기(1)
 # while loop를 사용해 프로그램을 작성하라.
 
+# for loop
 s = 'Hello'
 for letter in s:
     print(letter)
 
+# while loop
 i = 0
+
 while i < len(s):
     print(s[i])
     i += 1
@@ -30,6 +33,7 @@ while i < len(s):
 # 27.7-2  파이썬 프로그램 변환하기(2)
 # while loop을 사용해 프로그램을 재작성하라.
 
+# for loop
 x = 2
 
 for i in range(-2, 3):
@@ -37,7 +41,10 @@ for i in range(-2, 3):
 
 print(x)
 
+# while loop
+x = 2
 i = -2
+
 while i < 3:
     x = x ** 2
     i += 1
@@ -48,6 +55,7 @@ print(x)
 # 27.7-3  파이썬 프로그램 변환하기(3)
 # 사전-검사 루프 구조를 사용해 재작성하라.
 
+# for loop
 f = int(input())
 x = 3
 
@@ -56,7 +64,10 @@ for j in range(20, f, -5):
 
 print(x, j)
 
+# while loop
+x = 3
 j = 20
+
 while j > f:
     x = x / 2
     j -= 5
