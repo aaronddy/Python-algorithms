@@ -86,5 +86,3 @@ for y in range(5, -9, -3):
     s = s - 4 * y
 
 print(s)
-
-
