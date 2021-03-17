@@ -38,14 +38,14 @@ else:
 
 
 # 29.1-6  두 숫자의 대소 비교에 의한 개수 세기
-from random import *
+import random
 
 count_a = 0
 count_b = 0
 
 for i in range(10):
-    a = randint(1, 100)
-    b = randint(1, 100)
+    a = random.randint(1, 100)
+    b = random.randint(1, 100)
 
     if a > b:
         count_a += 1
@@ -58,14 +58,13 @@ print(count_a, count_b)
 
 
 # 29.1-7  자릿수의 개수 세기
-from random import *
 
 count_1d = 0
 count_2d = 0
 count_3d = 0
 
 for i in range(50):
-    rdnum = randint(1, 999)
+    rdnum = random.randint(1, 999)
 
     if rdnum // 10 == 0:
         count_1d += 1
@@ -86,7 +85,7 @@ sum_1000 = 0
 count = 0
 
 while sum_1000 <= 1000:
-    rdnum2 = randint(1, 499)
+    rdnum2 = random.randint(1, 499)
     sum_1000 += rdnum2
     
     count += 1
@@ -99,8 +98,8 @@ print(sum_1000, count)
 count = 0
 
 while True:
-    first = randint(1, 100)
-    second = randint(2, 9)
+    first = random.randint(1, 100)
+    second = random.randint(2, 9)
     result = first ** second
     count += 1
     print(result, first, second)

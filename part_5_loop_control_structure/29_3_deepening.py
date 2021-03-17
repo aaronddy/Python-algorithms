@@ -102,3 +102,108 @@ for i in range(10):
     
     
 print(total)
+
+
+# 29.4-2  x와 y 값 찾기
+# -20에서 +20까지의 범위 안에서 다음 방정식을 만족하는 x와 y의 정수값을 출력하는 프로그램을 작성하라.
+
+# 방정식: 3x^2 - 6y^2 = 6
+
+count = 0
+
+for x in range(-20, 21):
+    for y in range(-20, 21):
+        if (3 * x ** 2) - (6 * y ** 2) == 6:
+            count += 1
+            print('count', count, 'x:', x, 'y:', y) 
+
+
+
+# 29.4-3  러시안 곱셈 알고리즘
+# '러시안 곱셈 알고리즘'을 사용하여 두 양수의 곱을 계산할 수 있는데, 해당 순서도와 일치하는 파이썬 프로그램을 작성하라.
+
+m1 = float(input("m1 숫자를 입력하라"))
+m2 = float(input("m2 숫자를 입력하라"))
+
+s = 0
+
+while m2 != 0:
+    if m2 % 2 != 0:
+        s = s + m1
+
+    m1 = m1 * 2
+    m2 = m2 // 2
+
+print(s)
+
+
+
+# 29.4-4  제수 찾기
+# 정수를 입력받고 제수(divisor)의 총 개수를 출력하는 프로그램을 작성하라.
+
+x = int(input("정수를 입력하라"))
+
+number_of_divisors = 2
+
+for i in range(2, x//2 + 1):
+    if x % i == 0:
+        number_of_divisors += 1
+
+print(number_of_divisors)
+
+
+# 29.4-5  숫자가 소수인가?
+# 1보다 큰 정수를 입력받고 소수 여부를 나타내는 메시지를 출력해 주는 파이썬 프로그램을 작성하라.
+
+x = int(input("정수를 입력하라"))
+
+number_of_divisors = 2
+
+# code1
+for i in range(2, x//2 + 1):
+    if x % i == 0:
+        number_of_divisors += 1
+
+if number_of_divisors == 2:
+    print(x, "는 소수입니다.")
+
+else:
+    print(x, "는 소수가 아닙니다.", number_of_divisors, "개의 약수가 있습니다.")
+
+
+# code2 - 세 번째 약수가 발견될 때 루프를 빠져나가기(break 명령문 사용)
+for i in range(2, x//2 + 1):
+    if x % i == 0:
+        number_of_divisors += 1
+        break
+
+if number_of_divisors == 2:
+    print(x, "는 소수입니다.")
+
+
+
+# 29.4-6  1부터 N까지 모든 소수 찾기
+# 정수를 입력받고 2부터 주어진 정수까지의 모든 소수를 출력하는 파이썬 프로그램을 작성하라.
+
+IS_NUMERIC = "^[-+]?\\d+(\\.\\d+)?$"
+
+x = input("1보다 큰 정수를 입력하라")
+
+count = 0
+
+while not re.match(IS_NUMERIC, x) or int(x) < 2:
+    print("정수를 입력해 주세요.")
+    x = input("1보다 큰 정수를 입력하라")
+
+if re.match(IS_NUMERIC, x) and int(x) >= 2:
+    for i in range(2, int(x)+1):
+        number_of_divisors = 2
+        for j in range(2, i // 2 + 1):
+            if i % j == 0:
+                number_of_divisors += 1
+                break
+
+        if number_of_divisors == 2:
+            count += 1
+    
+    print("총 소수 개수는", count) 
