@@ -127,9 +127,9 @@ rdnum4 = int(input("정수를 입력하라"))
 total2 = 0
 
 while rdnum4 != 0:
-    a = renum4 % 10
+    a = rdnum4 % 10
     total2 += a
-    renum4 = renum4 // 10
+    rdnum4 = rdnum4 // 10
 
 print(total2)
 
