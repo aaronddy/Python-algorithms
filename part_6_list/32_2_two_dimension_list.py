@@ -60,3 +60,5 @@ for i in range(num):
             a_list[i][j] = 10
 
 print("a_list:", a_list)
+
+print(a_list[4][3])
