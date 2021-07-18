@@ -100,3 +100,52 @@ for i in range(ELEMENTS_B):
     new_arrC.append(lst_b[i])
 
 print("new_arrC:", new_arrC)
+
+
+
+# 35.1-4  2차원 리스트 병합하기
+two_depth_columns = 5
+two_depth_a_rows = 4
+two_depth_b_rows = 10
+two_depth_new_rows = two_depth_a_rows + two_depth_b_rows
+
+two_depth_a = [[None] * two_depth_columns for i in range(two_depth_a_rows)]
+two_depth_b = [[None] * two_depth_columns for i in range(two_depth_b_rows)]
+
+for i in range(two_depth_a_rows):
+    for j in range(two_depth_columns):
+        two_depth_a[i][j] = random.randint(1, 30)
+
+print("two_depth_a:", two_depth_a)
+
+for i in range(two_depth_b_rows):
+    for j in range(two_depth_columns):
+        two_depth_b[i][j] = random.randint(1, 30)
+
+print("two_depth_b:", two_depth_b)
+
+# 방법 A
+new_A = [ [None] * two_depth_columns for i in range(two_depth_new_rows) ]
+
+for i in range(two_depth_a_rows):
+    new_A[i] = two_depth_a[i]
+
+for i in range(two_depth_b_rows):
+    new_A[i+two_depth_a_rows] = two_depth_b[i]
+
+print("new_A:", new_A)
+
+# 방법 B
+new_B = two_depth_a + two_depth_b
+print("new_B:", new_B)
+
+# 방법 C
+new_C = []
+
+for i in range(two_depth_a_rows):
+    new_C.append(two_depth_a[i])
+
+for i in range(two_depth_b_rows):
+    new_C.append(two_depth_b[i])
+
+print("new_C:", new_C)
