@@ -114,6 +114,8 @@ for i in lst:
 
 print("**********************************")
 
+
+
 # 35.3-8  각 열의 최솟값과 최댓값 찾기
 
 lst2 = [ [None] * COLUMNS for i in range(ROWS) ]
